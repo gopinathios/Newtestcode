@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "UIImageView+AFNetworking.h"
+
+
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 @interface ViewController ()
 
@@ -19,7 +22,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // This is a decalre the web services cell.
-     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     // This code using for refreshing the data.
     refreshControl = [[UIRefreshControl alloc] init];
@@ -75,7 +78,7 @@
         
     }] resume];
     
- }
+}
 
 // This is for UITablevie datasource and delegate
 
@@ -83,7 +86,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-        return 1;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -96,7 +99,7 @@
 {
     
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-
+    
     static NSString *simpleTableIdentifier = @"cell";
     
     detailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -108,18 +111,17 @@
     NSString * titlestring = [resonsdetails objectAtIndex:indexPath.row][@"title"];
     NSString * descriptionstring =[resonsdetails objectAtIndex:indexPath.row][@"description"];
     NSString * imagestring =[resonsdetails objectAtIndex:indexPath.row][@"imageHref"];
-    NSLog(@"the string value%@",imagestring);
     
     // checking the null titles from services
     if ((titlestring == (id)[NSNull null] || titlestring.length == 0 ))
         
     {
         cell.titlelable.text = @"N/A";
-    
+        
     }
     else
     {
-    cell.titlelable.text = [NSString stringWithFormat:@"%@",titlestring];
+        cell.titlelable.text = [NSString stringWithFormat:@"%@",titlestring];
         
     }
     
@@ -127,11 +129,11 @@
     
     if ((descriptionstring == (id)[NSNull null] || descriptionstring.length == 0 ))
     {
-         cell.descriptionlable.text = @"N/A";
+        cell.descriptionlable.text = @"N/A";
     }
     else
     {
-       cell.descriptionlable.text =[NSString stringWithFormat:@"%@",descriptionstring];
+        cell.descriptionlable.text =[NSString stringWithFormat:@"%@",descriptionstring];
     }
     
     // checking the null image url from services
@@ -140,33 +142,23 @@
     {
         
         UIImage *image = [UIImage imageNamed: @"empty.png"];
-     //   Once you have an Image you can then set UIImageView:
+        //   Once you have an Image you can then set UIImageView:
         
         [cell.imagecell setImage:image];
         
-            }
+    }
     else{
-        
-        NSLog(@"loading %@",imagestring);
         /// this is  Lazy loading the image in UITableview ,
-
         NSURL *imgurl=[NSURL URLWithString:[NSString stringWithFormat:@"%@",imagestring]];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            // see if the cell is still visible ... it's possible the user has scrolled the cell so it's no longer visible, but the cell has been reused for another indexPath
-            UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:imgurl]];
-            
-            [cell.imagecell setImage:img];
-            
-        }];
-
-        
-           }
+        [cell.imagecell setImageWithURL:imgurl];
+    }
+    
     return cell;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 
