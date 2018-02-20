@@ -14,8 +14,8 @@
 		322ED49220373DFE009DEBDE /* detailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 322ED48F20373DFE009DEBDE /* detailTableViewCell.m */; };
 		322ED49620373E43009DEBDE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 322ED49520373E43009DEBDE /* MBProgressHUD.m */; };
 		8AEDF6E637609C5D052E9F5A /* libPods-NewTestcode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF260DC800EB74AAABBFDC66 /* libPods-NewTestcode.a */; };
-		8B0A2383203BF573001B47B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A2380203BF573001B47B6 /* ViewController.m */; };
-		8B0A2384203BF573001B47B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A2382203BF573001B47B6 /* Main.storyboard */; };
+		8B0A2387203BF65A001B47B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A2386203BF65A001B47B6 /* ViewController.m */; };
+		8B0A2389203BF65E001B47B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A2388203BF65E001B47B6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +32,9 @@
 		322ED49520373E43009DEBDE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		55637C7C7C28C57B5B8C7086 /* Pods-NewTestcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTestcode.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewTestcode/Pods-NewTestcode.release.xcconfig"; sourceTree = "<group>"; };
 		6C7E389305095727116E749E /* Pods-NewTestcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTestcode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewTestcode/Pods-NewTestcode.debug.xcconfig"; sourceTree = "<group>"; };
-		8B0A237F203BF573001B47B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "../../../Downloads/Newtestcode-master/NewTestcode/ViewController.h"; sourceTree = "<group>"; };
-		8B0A2380203BF573001B47B6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "../../../Downloads/Newtestcode-master/NewTestcode/ViewController.m"; sourceTree = "<group>"; };
-		8B0A2381203BF573001B47B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B0A2385203BF65A001B47B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B0A2386203BF65A001B47B6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B0A2388203BF65E001B47B6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BF260DC800EB74AAABBFDC66 /* libPods-NewTestcode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewTestcode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,9 +86,9 @@
 				322ED48E20373DFE009DEBDE /* detailTableViewCell.h */,
 				322ED49420373E43009DEBDE /* MBProgressHUD.h */,
 				322ED49520373E43009DEBDE /* MBProgressHUD.m */,
-				8B0A237F203BF573001B47B6 /* ViewController.h */,
-				8B0A2380203BF573001B47B6 /* ViewController.m */,
-				8B0A2382203BF573001B47B6 /* Main.storyboard */,
+				8B0A2385203BF65A001B47B6 /* ViewController.h */,
+				8B0A2386203BF65A001B47B6 /* ViewController.m */,
+				8B0A2388203BF65E001B47B6 /* Main.storyboard */,
 				322ED48320373D7D009DEBDE /* Assets.xcassets */,
 				322ED48520373D7D009DEBDE /* LaunchScreen.storyboard */,
 				322ED48820373D7D009DEBDE /* Info.plist */,
@@ -175,7 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B0A2384203BF573001B47B6 /* Main.storyboard in Resources */,
+				8B0A2389203BF65E001B47B6 /* Main.storyboard in Resources */,
 				322ED48720373D7D009DEBDE /* LaunchScreen.storyboard in Resources */,
 				322ED48420373D7D009DEBDE /* Assets.xcassets in Resources */,
 			);
@@ -243,7 +243,7 @@
 				322ED47920373D7D009DEBDE /* main.m in Sources */,
 				322ED49620373E43009DEBDE /* MBProgressHUD.m in Sources */,
 				322ED49220373DFE009DEBDE /* detailTableViewCell.m in Sources */,
-				8B0A2383203BF573001B47B6 /* ViewController.m in Sources */,
+				8B0A2387203BF65A001B47B6 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +256,6 @@
 				322ED48620373D7D009DEBDE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		8B0A2382203BF573001B47B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B0A2381203BF573001B47B6 /* Base */,
-			);
-			name = Main.storyboard;
-			path = "../../../Downloads/Newtestcode-master/NewTestcode";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
